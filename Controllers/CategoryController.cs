@@ -18,7 +18,7 @@ namespace ToDoList.Controllers
 
         public IActionResult Index()
         {
-            // جلب الكاتيجوريز مع المهام المرتبطة بهم
+            //get category with the task 
             var categories = _context.Categories
                 .Include(c => c.ToDos)
                 .ToList();
@@ -58,10 +58,10 @@ namespace ToDoList.Controllers
 
             if (category != null)
             {
-                // حذف جميع المهام المرتبطة بالفئة أولاً
+                // delete all tasks with that spefic category
                 _context.ToDos.RemoveRange(category.ToDos);
 
-                // ثم حذف الفئة نفسها
+                // delete the category now after deleteing it tasks 
                 _context.Categories.Remove(category);
                 _context.SaveChanges();
             }
