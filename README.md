@@ -40,17 +40,10 @@ A simple task management app built with **ASP.NET Core MVC** and **Entity Framew
 ## 🚀 How to Use
 
 1. Run the application  
-2. Open browser at `/Category` (important!)  
+2. Open browser at `/Category/` (important!)  
 3. Create categories  
 4. Add tasks to categories  
 5. Edit, delete, or toggle task status as needed
-
----
-
-## ⚠️ Important Notes
-
-- Configure database connection in `appsettings.json`  
-- Deleting a category also deletes its tasks automatically
 
 ---
 
